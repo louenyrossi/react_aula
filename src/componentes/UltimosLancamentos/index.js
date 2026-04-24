@@ -2,7 +2,7 @@ import { livros } from "./dadosUltimosLancamentos"
 import styled from "styled-components"
 
 const UltimosLancamentosContainer = styled.section`
-    background-color: #EBECEE
+    background-color: #EBECEE;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ const Titulo = styled.h2`
     background-color: #FFF;
     color: #EB9b00;
     font-size: 36px;
-    text-aligh: center;
+    text-align: center;
     margin:0;
 `
 const NovosLivrosContainer = styled.div`
@@ -25,15 +25,15 @@ const NovosLivrosContainer = styled.div`
     cursor: pointer;
 `
 
-function UltimosLancamentos(){
-    return(
+function UltimosLancamentos() {
+    return (
         <UltimosLancamentosContainer>
-        <Titulo>ÚLTIMOS LANÇAMENTOS</Titulo>
-        <NovosLivrosContainer>
-        { livros.map( livro => (
-            <img src={livro.src}/>
-        ))}
-        </NovosLivrosContainer>
+            <Titulo>ÚLTIMOS LANÇAMENTOS</Titulo>
+            <NovosLivrosContainer>
+                {livros.map(livro => (
+                    <img src={livro.src} />
+                ))}
+            </NovosLivrosContainer>
         </UltimosLancamentosContainer>
     )
 }
